@@ -8,5 +8,5 @@
         <a href="https://tuproq.dev/sqlite/"><img src="https://github.com/tuproq/sqlite/raw/gh-pages/badge.svg" /></a>
         <a href="https://github.com/tuproq/sqlite/blob/master/CONTRIBUTING.md"><img src="https://img.shields.io/badge/contributing-guide-brightgreen.svg" /></a>
     </p>
-    <p>A non-blocking SQLite client written in <a href="https://swift.org">Swift</a> language. This is one of the packages of <a href="https://tuproq.dev">Tuproq</a>. Read the <a href="https://docs.tuproq.dev">documentation</a> for more info.</p>
+    <p>An SQLite client written in <a href="https://swift.org">Swift</a> language. This is one of the packages of <a href="https://tuproq.dev">Tuproq</a>. Read the <a href="https://docs.tuproq.dev">documentation</a> for more info.</p>
 </div>
