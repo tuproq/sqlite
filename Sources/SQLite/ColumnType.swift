@@ -3,7 +3,7 @@ import SQLite3
 public enum ColumnType {
     case blob
     case float
-    case int
+    case integer
     case null
     case text
 
@@ -11,7 +11,7 @@ public enum ColumnType {
         switch self {
         case .blob: return SQLITE_BLOB
         case .float: return SQLITE_FLOAT
-        case .int: return SQLITE_INTEGER
+        case .integer: return SQLITE_INTEGER
         case .null: return SQLITE_NULL
         case .text: return SQLITE3_TEXT
         }
@@ -21,7 +21,7 @@ public enum ColumnType {
         switch rawValue {
         case SQLITE_BLOB: return .blob
         case SQLITE_FLOAT: return .float
-        case SQLITE_INTEGER: return .int
+        case SQLITE_INTEGER: return .integer
         case SQLITE_NULL: return .null
         default: return .text
         }
