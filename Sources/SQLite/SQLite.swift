@@ -81,3 +81,33 @@ extension SQLite {
         }
     }
 }
+
+func error(code: Int32 = SQLITE_ERROR, reason: SQLiteError.Reason) -> SQLiteError {
+    error(code: code, reason: reason.message)
+}
+
+func error(code: Int32 = SQLITE_ERROR, reason: String) -> SQLiteError {
+    SQLiteError(code: code, reason: reason)
+}
+
+func error(code: Int32 = SQLITE_ERROR) -> SQLiteError {
+    SQLiteError(code: code)
+}
+
+func lastErrorReason(handle: OpaquePointer?) -> String? {
+    if let cString = sqlite3_errmsg(handle) {
+        return String(cString: cString)
+    }
+
+    return nil
+}
+
+func assert(handle: OpaquePointer? = nil, code: Int32) throws {
+    if code != SQLITE_OK {
+        if let reason = lastErrorReason(handle: handle) {
+            throw error(code: code, reason: reason)
+        } else {
+            throw error(code: code)
+        }
+    }
+}
