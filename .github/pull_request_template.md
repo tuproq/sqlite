@@ -12,11 +12,11 @@ Before you submit this PR, please make sure:
 4. [ ] Your code adheres to [Swift API Design Guidelines](https://swift.org/documentation/api-design-guidelines)
 5. [ ] Your code adheres to [SwiftLint Formatting Rules](https://realm.github.io/SwiftLint/rule-directory.html) and doesn't introduce new formatting errors and warnings
 6. [ ] You have checked for typos
-7. [ ] You have updated the inline code documentation and [README](https://github.com/tuproq/mysql/blob/master/README.md) accordingly
+7. [ ] You have updated the inline code documentation and [README](https://github.com/tuproq/sqlite/blob/master/README.md) accordingly
 
 Add `x` to mark that you have done it or leave it empty but provide a reason below why you haven't done it. Make sure you provide the appropriate checklist number.
 
 ## Actions Status
 Copy your branch name and replace 2 `your-branch-name`s in the link with yours.
 
-[![Actions Status](https://github.com/tuproq/mysql/actions/workflows/development.yaml/badge.svg?branch=your-branch-name)](https://github.com/tuproq/mysql/actions/workflows/development.yaml?branch=your-branch-name)
+[![Actions Status](https://github.com/tuproq/sqlite/actions/workflows/development.yaml/badge.svg?branch=your-branch-name)](https://github.com/tuproq/sqlite/actions/workflows/development.yaml?branch=your-branch-name)
