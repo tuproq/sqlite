@@ -35,11 +35,20 @@ public struct Statement {
             let code = sqlite3_finalize(handle)
 
             if code != SQLITE_OK {
-                throw error(code: code, reason: database.lastErrorMessage)
+                if let lastErrorMessage = lastErrorReason(handle: handle) {
+                    throw error(code: code, reason: lastErrorMessage)
+                } else {
+                    throw error(code: code)
+                }
             }
 
             return nil
-        default: throw error(code: code, reason: database.lastErrorMessage)
+        default:
+            if let lastErrorMessage = lastErrorReason(handle: handle) {
+                throw error(code: code, reason: lastErrorMessage)
+            } else {
+                throw error(code: code)
+            }
         }
     }
 

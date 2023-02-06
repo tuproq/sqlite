@@ -9,14 +9,6 @@ public final class SQLite {
     public var lastInsertRowID: Int { Int(sqlite3_last_insert_rowid(handle)) }
     private(set) var handle: OpaquePointer?
 
-    var lastErrorMessage: String? {
-        if let cString = sqlite3_errmsg(handle) {
-            return String(cString: cString)
-        }
-
-        return nil
-    }
-
     public init(logger: Logger = .init(label: "dev.tuproq.sqlite")) {
         self.logger = logger
     }
