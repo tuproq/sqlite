@@ -1,9 +1,9 @@
-public struct Column: CustomStringConvertible, Equatable {
-    public let name: String
-    public let value: Decodable?
-    public var description: String { "\(name): \(value?.description ?? "nil")" }
+struct Column: CustomStringConvertible, Equatable {
+    let name: String
+    let value: Decodable?
+    var description: String { "\(name): \(value?.description ?? "nil")" }
 
-    public static func == (lhs: Column, rhs: Column) -> Bool {
+    static func == (lhs: Column, rhs: Column) -> Bool {
         lhs.name == rhs.name
     }
 }

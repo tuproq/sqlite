@@ -43,6 +43,12 @@ public final class SQLite {
     public func query(_ query: String, parameters: [Encodable?]) throws -> [[String: Decodable?]] {
         let statement = try Statement(query: query, database: self)
         try statement.bind(parameters)
+
+        return try execute(statement)
+    }
+
+    @discardableResult
+    public func execute(_ statement: Statement) throws -> [[String: Decodable?]] {
         var result = [[String: Decodable?]]()
 
         do {
@@ -56,7 +62,7 @@ public final class SQLite {
                 result.append(dictionary)
             }
 
-            logger.info("\(query)")
+            logger.info("\(statement.query)")
         } catch {
             logger.error("\(error)")
             throw error

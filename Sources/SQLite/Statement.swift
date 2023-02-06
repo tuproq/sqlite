@@ -18,7 +18,7 @@ public struct Statement {
         }
     }
 
-    public func row() throws -> Row? {
+    func row() throws -> Row? {
         let code = sqlite3_step(handle)
 
         switch code {
