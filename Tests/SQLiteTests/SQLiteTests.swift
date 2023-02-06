@@ -175,4 +175,23 @@ final class SQLiteTests: XCTestCase {
         XCTAssertEqual(result.first?["string"] as? String, string)
         XCTAssertEqual(result.first?["stringNil"] as? String, nil)
     }
+
+    func testUUID() {
+        // Arrange
+        let uuid = UUID()
+        let uuidNil: UUID? = nil
+        let parameters: [Encodable?] = [uuid, uuidNil]
+
+        try! database.query("CREATE TABLE test (uuid TEXT NOT NULL, uuidNil TEXT)")
+        try! database.query("INSERT INTO test (uuid, uuidNil) VALUES (?, ?)", parameters: parameters)
+
+        // Act
+        let result = try! database.query("SELECT * FROM test")
+
+        // Assert
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result.first?.count, parameters.count)
+        XCTAssertEqual(result.first?["uuid"] as? String, uuid.uuidString)
+        XCTAssertEqual(result.first?["uuidNil"] as? String, nil)
+    }
 }
