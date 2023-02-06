@@ -61,4 +61,23 @@ final class SQLiteTests: XCTestCase {
         XCTAssertEqual(result.first?["data"] as? Data, data)
         XCTAssertEqual(result.first?["dataNil"] as? Data, nil)
     }
+
+    func testDate() {
+        // Arrange
+        let date = Date()
+        let dateNil: Date? = nil
+        let parameters: [Encodable?] = [date, dateNil]
+
+        try! database.query("CREATE TABLE test (date REAL NOT NULL, dateNil REAL)")
+        try! database.query("INSERT INTO test (date, dateNil) VALUES (?, ?)", parameters: parameters)
+
+        // Act
+        let result = try! database.query("SELECT * FROM test")
+
+        // Assert
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result.first?.count, parameters.count)
+        XCTAssertEqual(result.first?["date"] as? Double, date.timeIntervalSince1970)
+        XCTAssertEqual(result.first?["dateNil"] as? Double, nil)
+    }
 }
