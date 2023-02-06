@@ -99,4 +99,23 @@ final class SQLiteTests: XCTestCase {
         XCTAssertEqual(result.first?["decimal"] as? Double, Double(truncating: decimal as NSNumber))
         XCTAssertEqual(result.first?["decimalNil"] as? Double, nil)
     }
+
+    func testDouble() {
+        // Arrange
+        let double = 2.5
+        let doubleNil: Double? = nil
+        let parameters: [Encodable?] = [double, doubleNil]
+
+        try! database.query("CREATE TABLE test (double REAL NOT NULL, doubleNil REAL)")
+        try! database.query("INSERT INTO test (double, doubleNil) VALUES (?, ?)", parameters: parameters)
+
+        // Act
+        let result = try! database.query("SELECT * FROM test")
+
+        // Assert
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result.first?.count, parameters.count)
+        XCTAssertEqual(result.first?["double"] as? Double, double)
+        XCTAssertEqual(result.first?["doubleNil"] as? Double, nil)
+    }
 }
