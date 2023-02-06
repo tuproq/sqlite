@@ -23,4 +23,12 @@ final class SQLiteErrorTests: XCTestCase {
         XCTAssertEqual(error.reason, reason)
         XCTAssertEqual(error.description, "[\(code)] \(reason)")
     }
+
+    func testReasons() {
+        // Assert
+        XCTAssertEqual(SQLiteError.Reason.invalidColumnValue.message, "Invalid column value")
+        XCTAssertEqual(SQLiteError.Reason.unexpectedNilColumnName.message, "Unexpected nil column name")
+        XCTAssertEqual(SQLiteError.Reason.unexpectedNilColumnValue.message, "Unexpected nil column value")
+        XCTAssertEqual(SQLiteError.Reason.unknown.message, "Unknown error")
+    }
 }
