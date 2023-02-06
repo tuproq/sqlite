@@ -80,4 +80,23 @@ final class SQLiteTests: XCTestCase {
         XCTAssertEqual(result.first?["date"] as? Double, date.timeIntervalSince1970)
         XCTAssertEqual(result.first?["dateNil"] as? Double, nil)
     }
+
+    func testDecimal() {
+        // Arrange
+        let decimal = Decimal(1.5)
+        let decimalNil: Decimal? = nil
+        let parameters: [Encodable?] = [decimal, decimalNil]
+
+        try! database.query("CREATE TABLE test (decimal REAL NOT NULL, decimalNil REAL)")
+        try! database.query("INSERT INTO test (decimal, decimalNil) VALUES (?, ?)", parameters: parameters)
+
+        // Act
+        let result = try! database.query("SELECT * FROM test")
+
+        // Assert
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result.first?.count, parameters.count)
+        XCTAssertEqual(result.first?["decimal"] as? Double, Double(truncating: decimal as NSNumber))
+        XCTAssertEqual(result.first?["decimalNil"] as? Double, nil)
+    }
 }
