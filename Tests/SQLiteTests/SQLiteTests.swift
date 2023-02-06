@@ -118,4 +118,23 @@ final class SQLiteTests: XCTestCase {
         XCTAssertEqual(result.first?["double"] as? Double, double)
         XCTAssertEqual(result.first?["doubleNil"] as? Double, nil)
     }
+
+    func testFloat() {
+        // Arrange
+        let float = Float(3.2)
+        let floatNil: Float? = nil
+        let parameters: [Encodable?] = [float, floatNil]
+
+        try! database.query("CREATE TABLE test (float REAL NOT NULL, floatNil REAL)")
+        try! database.query("INSERT INTO test (float, floatNil) VALUES (?, ?)", parameters: parameters)
+
+        // Act
+        let result = try! database.query("SELECT * FROM test")
+
+        // Assert
+        XCTAssertEqual(result.count, 1)
+        XCTAssertEqual(result.first?.count, parameters.count)
+        XCTAssertEqual(result.first?["float"] as? Double, Double(float))
+        XCTAssertEqual(result.first?["floatNil"] as? Double, nil)
+    }
 }
