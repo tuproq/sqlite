@@ -1,4 +1,8 @@
+#if os(Linux)
+import CSQLite
+#else
 import SQLite3
+#endif
 
 extension FixedWidthInteger {
     public init(statement: Statement, column: Int32) throws {

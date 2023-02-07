@@ -14,12 +14,13 @@ let package = Package(
         .library(name: "SQLite", targets: ["SQLite"])
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0")
+        .package(url: "https://github.com/apple/swift-log.git", from: "1.0.0"),
+        .package(name: "tuproq-csqlite", url: "https://github.com/tuproq/csqlite.git", .branch("master"))
     ],
     targets: [
         .target(name: "SQLite", dependencies: [
-            .target(name: "SQLite3"),
-            .product(name: "Logging", package: "swift-log")
+            .product(name: "Logging", package: "swift-log"),
+            .product(name: "CSQLite", package: "tuproq-csqlite")
         ]),
         .testTarget(name: "SQLiteTests", dependencies: [
             .target(name: "SQLite")
