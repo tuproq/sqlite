@@ -1,7 +1,7 @@
 #if os(Linux)
-import CSQLite
+import CSQLiteLinux
 #else
-import SQLite3
+import CSQLiteDarwin
 #endif
 
 extension Float: Encodable {
