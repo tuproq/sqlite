@@ -18,6 +18,7 @@ let package = Package(
     ],
     targets: [
         .target(name: "SQLite", dependencies: [
+            .target(name: "SQLite3"),
             .product(name: "Logging", package: "swift-log")
         ]),
         .testTarget(name: "SQLiteTests", dependencies: [
@@ -26,13 +27,3 @@ let package = Package(
     ],
     swiftLanguageVersions: [.v5]
 )
-
-#if os(Linux)
-package.targets.append(
-    .systemLibrary(name: "SQLite3", providers: [
-        .apt(["libsqlite3-dev"]),
-        .yum(["sqlite-devel"])
-    ])
-)
-package.targets[0].dependencies.append(.target(name: "SQLite3"))
-#endif
