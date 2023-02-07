@@ -23,7 +23,7 @@ jobs:
   ubuntu:
     runs-on: ubuntu-latest
     container:
-      image: swift:5.0-bionic
+      image: swift:5.3-bionic
     steps:
     - name: Checkout
       uses: actions/checkout@v2
