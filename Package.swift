@@ -12,7 +12,6 @@ let package = Package(
     ],
     targets: [
         .target(name: "SQLite", dependencies: [
-            .target(name: "CSQLite"),
             .product(name: "Logging", package: "swift-log")
         ]),
         .target(name: "CSQLite"),

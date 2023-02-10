@@ -1,9 +1,5 @@
 import Foundation
-#if os(Linux)
-import CSQLiteLinux
-#else
-import CSQLiteDarwin
-#endif
+import SQLite3
 
 public struct Statement {
     public let query: String

@@ -1,10 +1,6 @@
 import Foundation
 import Logging
-#if os(Linux)
-import CSQLiteLinux
-#else
-import CSQLiteDarwin
-#endif
+import SQLite3
 
 let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
 

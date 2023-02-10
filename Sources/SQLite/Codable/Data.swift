@@ -1,9 +1,5 @@
 import Foundation
-#if os(Linux)
-import CSQLiteLinux
-#else
-import CSQLiteDarwin
-#endif
+import SQLite3
 
 extension Data: Codable {
     public init(statement: Statement, column: Int32) throws {
