@@ -5,17 +5,15 @@ import SQLite3
 let SQLITE_TRANSIENT = unsafeBitCast(-1, to: sqlite3_destructor_type.self)
 
 public final class SQLite {
-    public let path: String
     public let logger: Logger
     public var lastInsertRowID: Int { Int(sqlite3_last_insert_rowid(handle)) }
     private(set) var handle: OpaquePointer?
 
-    public init(path: String = ":memory:", logger: Logger = .init(label: "dev.tuproq.sqlite")) {
-        self.path = path
+    public init(logger: Logger = .init(label: "dev.tuproq.sqlite")) {
         self.logger = logger
     }
 
-    public func open(options: Options = [.create, .fullMutex, .readWrite]) throws {
+    public func open(path: String = ":memory:", options: Options = [.create, .fullMutex, .readWrite]) throws {
         close()
         let code = sqlite3_open_v2(path, &handle, options.rawValue, nil)
 
