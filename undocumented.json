@@ -1,0 +1,299 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Bool.swift",
+      "line": 2,
+      "symbol": "Bool.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Data.swift",
+      "line": 5,
+      "symbol": "Data.init(statement:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Data.swift",
+      "line": 15,
+      "symbol": "Data.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Date.swift",
+      "line": 4,
+      "symbol": "Date.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Decimal.swift",
+      "line": 4,
+      "symbol": "Decimal.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Double.swift",
+      "line": 4,
+      "symbol": "Double.init(statement:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Double.swift",
+      "line": 8,
+      "symbol": "Double.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Float.swift",
+      "line": 2,
+      "symbol": "Float.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Int.swift",
+      "line": 4,
+      "symbol": "FixedWidthInteger.init(statement:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/Int.swift",
+      "line": 8,
+      "symbol": "FixedWidthInteger.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/String.swift",
+      "line": 4,
+      "symbol": "String.init(statement:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/String.swift",
+      "line": 12,
+      "symbol": "String.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Data/UUID.swift",
+      "line": 4,
+      "symbol": "UUID.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 7,
+      "symbol": "SQLite",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 8,
+      "symbol": "SQLite.logger",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 9,
+      "symbol": "SQLite.lastInsertRowID",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 12,
+      "symbol": "SQLite.init(logger:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 16,
+      "symbol": "SQLite.open(path:options:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 30,
+      "symbol": "SQLite.close()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 38,
+      "symbol": "SQLite.query(_:parameters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 43,
+      "symbol": "SQLite.query(_:parameters:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 51,
+      "symbol": "SQLite.execute(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 75,
+      "symbol": "SQLite",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 76,
+      "symbol": "SQLite.Options",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 77,
+      "symbol": "SQLite.Options.create",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 78,
+      "symbol": "SQLite.Options.fullMutex",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 79,
+      "symbol": "SQLite.Options.noMutex",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 80,
+      "symbol": "SQLite.Options.readOnly",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLite.swift",
+      "line": 81,
+      "symbol": "SQLite.Options.readWrite",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLiteCodable.swift",
+      "line": 1,
+      "symbol": "SQLiteCodable",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLiteCodable.swift",
+      "line": 3,
+      "symbol": "SQLiteDecodable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLiteCodable.swift",
+      "line": 4,
+      "symbol": "SQLiteDecodable.init(statement:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLiteCodable.swift",
+      "line": 7,
+      "symbol": "SQLiteEncodable",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLiteCodable.swift",
+      "line": 8,
+      "symbol": "SQLiteEncodable.encode(into:column:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLiteError.swift",
+      "line": 1,
+      "symbol": "SQLiteError",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLiteError.swift",
+      "line": 2,
+      "symbol": "SQLiteError.code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/SQLiteError.swift",
+      "line": 3,
+      "symbol": "SQLiteError.reason",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Statement.swift",
+      "line": 4,
+      "symbol": "Statement",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Statement.swift",
+      "line": 5,
+      "symbol": "Statement.query",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Statement.swift",
+      "line": 6,
+      "symbol": "Statement.database",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Statement.swift",
+      "line": 9,
+      "symbol": "Statement.init(query:database:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/sqlite/sqlite/Sources/SQLite/Statement.swift",
+      "line": 15,
+      "symbol": "Statement.bind(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/sqlite/sqlite"
+}
