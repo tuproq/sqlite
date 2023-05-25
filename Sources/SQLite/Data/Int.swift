@@ -11,13 +11,13 @@ extension FixedWidthInteger {
     }
 }
 
-extension Int: Codable {}
-extension Int8: Codable {}
-extension Int16: Codable {}
-extension Int32: Codable {}
-extension Int64: Codable {}
-extension UInt: Codable {}
-extension UInt8: Codable {}
-extension UInt16: Codable {}
-extension UInt32: Codable {}
-extension UInt64: Codable {}
+extension Int: SQLiteCodable {}
+extension Int8: SQLiteCodable {}
+extension Int16: SQLiteCodable {}
+extension Int32: SQLiteCodable {}
+extension Int64: SQLiteCodable {}
+extension UInt: SQLiteCodable {}
+extension UInt8: SQLiteCodable {}
+extension UInt16: SQLiteCodable {}
+extension UInt32: SQLiteCodable {}
+extension UInt64: SQLiteCodable {}

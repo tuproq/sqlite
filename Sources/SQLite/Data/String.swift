@@ -1,6 +1,6 @@
 import SQLite3
 
-extension String: Codable {
+extension String: SQLiteCodable {
     public init(statement: Statement, column: Int32) throws {
         if let cString = sqlite3_column_text(statement.handle, column) {
             self = .init(cString: cString)

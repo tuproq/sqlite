@@ -12,7 +12,7 @@ public struct Statement {
         try assert(code: sqlite3_prepare_v2(database.handle, query, -1, &handle, nil))
     }
 
-    public func bind(_ parameters: [Encodable?]) throws {
+    public func bind(_ parameters: [SQLiteEncodable?]) throws {
         for (index, parameter) in parameters.enumerated() {
             try parameter?.encode(into: self, column: Int32(index + 1))
         }
@@ -60,7 +60,7 @@ public struct Statement {
         throw error(reason: .unexpectedNilColumnName)
     }
 
-    private func columnValue(at column: Int32) throws -> Decodable? {
+    private func columnValue(at column: Int32) throws -> SQLiteDecodable? {
         switch sqlite3_column_type(handle, column) {
         case SQLITE_BLOB: return try Data(statement: self, column: column)
         case SQLITE_FLOAT: return try Double(statement: self, column: column)

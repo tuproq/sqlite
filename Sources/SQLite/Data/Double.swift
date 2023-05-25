@@ -1,6 +1,6 @@
 import SQLite3
 
-extension Double: Codable {
+extension Double: SQLiteCodable {
     public init(statement: Statement, column: Int32) throws {
         self = .init(sqlite3_column_double(statement.handle, column))
     }

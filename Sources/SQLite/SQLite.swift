@@ -35,12 +35,12 @@ public final class SQLite {
     }
 
     @discardableResult
-    public func query(_ query: String, parameters: Encodable?...) throws -> [[String: Decodable?]] {
+    public func query(_ query: String, parameters: SQLiteEncodable?...) throws -> [[String: SQLiteDecodable?]] {
         try self.query(query, parameters: parameters)
     }
 
     @discardableResult
-    public func query(_ query: String, parameters: [Encodable?]) throws -> [[String: Decodable?]] {
+    public func query(_ query: String, parameters: [SQLiteEncodable?]) throws -> [[String: SQLiteDecodable?]] {
         let statement = try Statement(query: query, database: self)
         try statement.bind(parameters)
 
@@ -48,12 +48,12 @@ public final class SQLite {
     }
 
     @discardableResult
-    public func execute(_ statement: Statement) throws -> [[String: Decodable?]] {
-        var result = [[String: Decodable?]]()
+    public func execute(_ statement: Statement) throws -> [[String: SQLiteDecodable?]] {
+        var result = [[String: SQLiteDecodable?]]()
 
         do {
             while let row = try statement.row() {
-                var dictionary = [String: Decodable?]()
+                var dictionary = [String: SQLiteDecodable?]()
 
                 for column in row.columns {
                     dictionary[column.name] = column.value

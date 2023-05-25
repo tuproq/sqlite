@@ -1,7 +1,7 @@
 import Foundation
 import SQLite3
 
-extension Data: Codable {
+extension Data: SQLiteCodable {
     public init(statement: Statement, column: Int32) throws {
         let length = sqlite3_column_bytes(statement.handle, column)
 

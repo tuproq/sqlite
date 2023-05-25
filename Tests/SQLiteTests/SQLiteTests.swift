@@ -22,7 +22,7 @@ final class SQLiteTests: XCTestCase {
         let boolTrue = true
         let boolFalse = false
         let boolNil: Bool? = nil
-        let parameters: [Encodable?] = [boolTrue, boolFalse, boolNil]
+        let parameters: [SQLiteEncodable?] = [boolTrue, boolFalse, boolNil]
 
         try! database.query(
             "CREATE TABLE test (boolTrue INTEGER NOT NULL, boolFalse INTEGER NOT NULL, boolNil INTEGER)"
@@ -47,7 +47,7 @@ final class SQLiteTests: XCTestCase {
         // Arrange
         let data = Data("data".utf8)
         let dataNil: Data? = nil
-        let parameters: [Encodable?] = [data, dataNil]
+        let parameters: [SQLiteEncodable?] = [data, dataNil]
 
         try! database.query("CREATE TABLE test (data BLOB NOT NULL, dataNil BLOB)")
         try! database.query("INSERT INTO test (data, dataNil) VALUES (?, ?)", parameters: parameters)
@@ -66,7 +66,7 @@ final class SQLiteTests: XCTestCase {
         // Arrange
         let date = Date()
         let dateNil: Date? = nil
-        let parameters: [Encodable?] = [date, dateNil]
+        let parameters: [SQLiteEncodable?] = [date, dateNil]
 
         try! database.query("CREATE TABLE test (date REAL NOT NULL, dateNil REAL)")
         try! database.query("INSERT INTO test (date, dateNil) VALUES (?, ?)", parameters: parameters)
@@ -85,7 +85,7 @@ final class SQLiteTests: XCTestCase {
         // Arrange
         let decimal = Decimal(1.5)
         let decimalNil: Decimal? = nil
-        let parameters: [Encodable?] = [decimal, decimalNil]
+        let parameters: [SQLiteEncodable?] = [decimal, decimalNil]
 
         try! database.query("CREATE TABLE test (decimal REAL NOT NULL, decimalNil REAL)")
         try! database.query("INSERT INTO test (decimal, decimalNil) VALUES (?, ?)", parameters: parameters)
@@ -104,7 +104,7 @@ final class SQLiteTests: XCTestCase {
         // Arrange
         let double = 2.5
         let doubleNil: Double? = nil
-        let parameters: [Encodable?] = [double, doubleNil]
+        let parameters: [SQLiteEncodable?] = [double, doubleNil]
 
         try! database.query("CREATE TABLE test (double REAL NOT NULL, doubleNil REAL)")
         try! database.query("INSERT INTO test (double, doubleNil) VALUES (?, ?)", parameters: parameters)
@@ -123,7 +123,7 @@ final class SQLiteTests: XCTestCase {
         // Arrange
         let float = Float(3.2)
         let floatNil: Float? = nil
-        let parameters: [Encodable?] = [float, floatNil]
+        let parameters: [SQLiteEncodable?] = [float, floatNil]
 
         try! database.query("CREATE TABLE test (float REAL NOT NULL, floatNil REAL)")
         try! database.query("INSERT INTO test (float, floatNil) VALUES (?, ?)", parameters: parameters)
@@ -142,7 +142,7 @@ final class SQLiteTests: XCTestCase {
         // Arrange
         let int = 3
         let intNil: Double? = nil
-        let parameters: [Encodable?] = [int, intNil]
+        let parameters: [SQLiteEncodable?] = [int, intNil]
 
         try! database.query("CREATE TABLE test (int INTEGER NOT NULL, intNil INTEGER)")
         try! database.query("INSERT INTO test (int, intNil) VALUES (?, ?)", parameters: parameters)
@@ -161,7 +161,7 @@ final class SQLiteTests: XCTestCase {
         // Arrange
         let string = "string"
         let stringNil: String? = nil
-        let parameters: [Encodable?] = [string, stringNil]
+        let parameters: [SQLiteEncodable?] = [string, stringNil]
 
         try! database.query("CREATE TABLE test (string TEXT NOT NULL, stringNil TEXT)")
         try! database.query("INSERT INTO test (string, stringNil) VALUES (?, ?)", parameters: parameters)
@@ -180,7 +180,7 @@ final class SQLiteTests: XCTestCase {
         // Arrange
         let uuid = UUID()
         let uuidNil: UUID? = nil
-        let parameters: [Encodable?] = [uuid, uuidNil]
+        let parameters: [SQLiteEncodable?] = [uuid, uuidNil]
 
         try! database.query("CREATE TABLE test (uuid TEXT NOT NULL, uuidNil TEXT)")
         try! database.query("INSERT INTO test (uuid, uuidNil) VALUES (?, ?)", parameters: parameters)
